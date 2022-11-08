@@ -1,5 +1,5 @@
 {
-  "name": "wire-elements/modal",
+  "name": "kda/livewire-modal",
   "description": "Laravel Livewire modal component",
   "keywords": [
     "laravel",
@@ -44,5 +44,8 @@
     }
   },
   "minimum-stability": "dev",
-  "prefer-stable": true
+  "prefer-stable": true,
+  "replace": {
+    "wire-elements/modal":"*"
+  }
 }
