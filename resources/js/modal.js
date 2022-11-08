@@ -32,7 +32,7 @@ window.LivewireUIModal = () => {
 
             if (this.getActiveComponentModalAttribute('dispatchCloseEvent') === true) {
                 const componentName = this.$wire.get('components')[this.activeComponent].name;
-                Livewire.emit('modalClosed', componentName);
+                Livewire.emit('modalClosed', componentName,this.$wire.get('components')[this.activeComponent]['attributes'],this.$wire.get('components')[this.activeComponent]['modalAttributes']);
             }
 
             if (this.getActiveComponentModalAttribute('destroyOnClose') === true) {
