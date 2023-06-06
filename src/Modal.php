@@ -25,10 +25,10 @@ class Modal extends Component
         $componentClass = app('livewire')->getClass($component);
         $reflect = new ReflectionClass($componentClass);
 
-        if ($reflect->implementsInterface($requiredInterface) === false) {
+      /*  if ($reflect->implementsInterface($requiredInterface) === false) {
             throw new Exception("[{$componentClass}] does not implement [{$requiredInterface}] interface.");
         }
-
+*/
         $id = md5($component . serialize($componentAttributes));
         $this->components[$id] = [
             'name'            => $component,
