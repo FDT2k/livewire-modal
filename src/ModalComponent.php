@@ -98,6 +98,11 @@ abstract class ModalComponent extends Component implements Contract
     {
         return config('livewire-ui-modal.component_defaults.close_modal_on_escape_is_forceful', true);
     }
+    
+    public static function closeModalOnClickIsForceful(): bool
+    {
+        return config('livewire-ui-modal.component_defaults.close_modal_on_click_is_forceful', true);
+    }
 
     public static function dispatchCloseEvent(): bool
     {

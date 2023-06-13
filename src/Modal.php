@@ -37,6 +37,7 @@ class Modal extends Component
                 'closeOnClickAway' => $componentClass::closeModalOnClickAway(),
                 'closeOnEscape' => $componentClass::closeModalOnEscape(),
                 'closeOnEscapeIsForceful' => $componentClass::closeModalOnEscapeIsForceful(),
+                'closeOnClickIsForceful' => $componentClass::closeModalOnClickIsForceful(),
                 'dispatchCloseEvent' => $componentClass::dispatchCloseEvent(),
                 'destroyOnClose' => $componentClass::destroyOnClose(),
                 'maxWidth' => $componentClass::modalMaxWidth(),

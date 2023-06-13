@@ -22,8 +22,8 @@ window.LivewireUIModal = () => {
             if (this.getActiveComponentModalAttribute('closeOnClickAway') === false) {
                 return;
             }
-
-            this.closeModal(true);
+            let force = this.getActiveComponentModalAttribute('closeOnClickIsForceful') === true;
+            this.closeModal(force);
         },
         closeModal(force = false, skipPreviousModals = 0, destroySkipped = false) {
             if(this.show === false) {
@@ -89,8 +89,6 @@ window.LivewireUIModal = () => {
                     this.modalWidth = this.getActiveComponentModalAttribute('maxWidthClass');
                 }, 300);
             }
-<<<<<<< HEAD
-=======
 
             this.$nextTick(() => {
                 let focusable = this.$refs[id]?.querySelector('[autofocus]');
@@ -124,7 +122,6 @@ window.LivewireUIModal = () => {
         },
         prevFocusableIndex() {
             return Math.max(0, this.focusables().indexOf(document.activeElement)) - 1
->>>>>>> 6aec30dd68c40bb124c30a5f4c81dd625405bc11
         },
         setShowPropertyTo(show) {
             this.show = show;
