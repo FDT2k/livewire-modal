@@ -1,0 +1,15 @@
+stages:          # List of stages for jobs, and their order of execution
+  - deploy
+
+deploy-job:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  environment: production
+  rules:
+    - if: '$CI_COMMIT_TAG'
+      when: on_success
+    - when: manual
+  script:
+    - echo "Deploying application..."
+    - > 
+        curl -H "Authorization: Bearer $SATIS_KEY" -H 'Access-Control-Allow-Credentials: true' -d 'pkg=kda/livewire-modal&flag=1' -H 'Content-Type: application/x-www-form-urlencoded' -H 'Accept: application/json' -X POST https://packages.karsegard.dev/api/rebuild
+    
