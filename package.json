@@ -15,5 +15,6 @@
     "tailwindcss": "^2.2.4",
     "vue-template-compiler": "^2.6.12",
     "webpack": "^5.74.0"
-  }
+  },
+  "packageManager": "yarn@4.1.0"
 }
